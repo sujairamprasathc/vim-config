@@ -1,6 +1,5 @@
 " General config
 syntax on
-set mouse=a
 set number
 set autoread
 set autochdir
