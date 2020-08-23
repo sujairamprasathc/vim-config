@@ -1,10 +1,21 @@
 all: init-config color-config
 
-init-config:
-	install main.vimrc ~/.vimrc
-	install general.vimrc ~/.vim/general.vimrc
-	install color_config.vimrc ~/.vim/color_config.vimrc
-	install global_key_mapping.vimrc ~/.vim/global_key_mapping.vimrc
+init-config: ~/.vim/
+	install -m644 main.vimrc ~/.vimrc
+	install -m644 general.vimrc ~/.vim/general.vimrc
+	install -m644 color_config.vimrc ~/.vim/color_config.vimrc
+	install -m644 global_key_mapping.vimrc ~/.vim/global_key_mapping.vimrc
 
-color-config:
-	install -d ./colors/ ~/.vim/colors/
+color-config: ~/.vim/
+	cp -r ./colors/ ~/.vim/colors/
+
+~/.vim/:
+	mkdir ~/.vim/
+
+clean:
+	rm -f ~/.vimrc
+	rm -f ~/.vim/general.vimrc
+	rm -f ~/.vim/color_config.vimrc
+	rm -f ~/.vim/global_key_mapping.vimrc
+	rm -rf ~/.vim/colors/
+	rm -fd ~/.vim
