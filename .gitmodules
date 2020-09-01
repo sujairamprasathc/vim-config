@@ -1,0 +1,3 @@
+[submodule "external/taboo.vim"]
+	path = external/taboo.vim
+	url = https://github.com/gcmt/taboo.vim.git
