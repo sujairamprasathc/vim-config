@@ -1,6 +1,10 @@
 " Global key mapping
-inoremap <F9> <ESC>:w<CR>a
-noremap <F9> :w<CR>
+
+" Shortcut to save file
+" Use update instead of write so that the file is not rewritten if no changes
+" are made
+inoremap <F9> <ESC>:update<CR>a
+noremap <F9> :update<CR>
 
 " Shortcut to switch tab easily
 noremap <C-w>, :tabprevious<CR>
