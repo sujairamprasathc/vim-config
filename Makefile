@@ -3,6 +3,7 @@ all: init-config color-config plugins
 init-config: ~/.vim/
 	install -m644 main.vimrc ~/.vimrc
 	install -m644 mouse.vimrc ~/.vim/mouse.vimrc
+	install -m644 netrw.vimrc ~/.vim/netrw.vimrc
 	install -m644 general.vimrc ~/.vim/general.vimrc
 	install -m644 autocomplete.vimrc ~/.vim/autocomplete.vimrc
 	install -m644 color_config.vimrc ~/.vim/color_config.vimrc
@@ -29,6 +30,7 @@ clean: clean-files clean-plugins clean-directories
 
 clean-files:
 	rm -f ~/.vimrc
+	rm -f ~/.vim/netrw.vimrc
 	rm -f ~/.vim/mouse.vimrc
 	rm -f ~/.vim/general.vimrc
 	rm -f ~/.vim/autocomplete.vimrc

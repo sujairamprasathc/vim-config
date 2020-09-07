@@ -1,4 +1,5 @@
 source ~/.vim/mouse.vimrc
+source ~/.vim/netrw.vimrc
 source ~/.vim/general.vimrc
 source ~/.vim/autocomplete.vimrc
 source ~/.vim/color_config.vimrc
