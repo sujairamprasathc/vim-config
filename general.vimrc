@@ -7,6 +7,7 @@ set autoindent
 set splitright
 set splitbelow
 set showcmd
+set history=10000
 set showtabline=2
 set laststatus=2
 set foldmethod=syntax
