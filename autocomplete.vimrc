@@ -1,7 +1,5 @@
 " Refer https://vi.stackexchange.com/questions/8900/autocomplete-after-serveral-chars
 " Minimalist-AutoCompletePop-Plugin
-inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
-autocmd InsertCharPre * call AutoComplete()
 fun! AutoComplete()
 	if v:char =~ '\K'
 		\ && getline('.')[col('.') - 3] !~ '\K'

@@ -20,6 +20,7 @@ file-type-plugins:
 	mkdir -p ~/.vim/after/ftplugin
 	install -m644 ./after/ftplugin/c.vim ~/.vim/after/ftplugin/c.vim
 	install -m644 ./after/ftplugin/python.vim ~/.vim/after/ftplugin/python.vim
+	install -m644 ./after/ftplugin/javascript.vim ~/.vim/after/ftplugin/javascript.vim
 
 plugins: create-directories taboo.vim
 
@@ -32,7 +33,7 @@ create-directories:
 	mkdir -p ~/.vim/plugin
 	mkdir -p ~/.vim/doc
 
-clean: clean-files clean-plugins clean-directories
+clean: clean-files clean-plugins clean-file-type-plugins clean-directories
 
 clean-files:
 	rm -f ~/.vimrc
@@ -44,6 +45,9 @@ clean-files:
 	rm -f ~/.vim/global_key_mapping.vimrc
 	rm -f ~/.vim/thesaurus_complete.vimrc
 	rm -rf ~/.vim/colors/
+
+clean-file-type-plugins:
+	rm -rf ~/.vim/after/
 
 clean-directories:
 	rm -fd ~/.vim/plugin
